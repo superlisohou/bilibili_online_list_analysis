@@ -35,6 +35,8 @@ if __name__ == '__main__':
     hp.close()
     
     # output to standard stream
-    for i in range(20):
-        print(args.file_name[:10]+','+str(i+1)+','+hp.videos[i])
+    rank = 0
+    for video in hp.videos:
+        rank += 1
+        print(args.file_name[:10]+','+str(rank)+','+video)
 
